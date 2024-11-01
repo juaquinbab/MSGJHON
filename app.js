@@ -104,7 +104,7 @@ client.on('message', async (message) => {
 
   
   
-  client.sendMessage(message.from, '*¡Hola!* 👋 Gracias por comunicarte con *JOHN STORE*. 🍿🎬 recuerda que esta linea es solo de información. \n\n⬇ Aquí abajo te dejo nuestro numero de *VENTAS* para que puedas contactarnos\n\n*LINEA DE VENTAS*: 📲 573132502527\n\n\nUno de nuestros asesores 👩🏼‍💻👨🏽‍💻 te ayudará con tu requerimiento. 📞 *TE ESPERAMOS*');
+  client.sendMessage(message.from, '*¡Hola!* 👋 Gracias por comunicarte con *JOHN STORE*. 🍿🎬 recuerda que esta linea es solo de información. \n\n⬇ Aquí abajo te dejo nuestro numero de *VENTAS* para que puedas contactarnos\n\n*LINEA DE VENTAS*: 📲 573024572102\n\n\nUno de nuestros asesores 👩🏼‍💻👨🏽‍💻 te ayudará con tu requerimiento. 📞 *TE ESPERAMOS*');
   
   
   
