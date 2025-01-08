@@ -15,6 +15,8 @@ app.use(express.static(__dirname + '/public'));
 const port = process.env.PORT;
 
 
+
+
 const SESSION_FILE_PATH = './session.json';
 
 let sessionData;
@@ -100,7 +102,7 @@ const registro = {}; // Registra los numeros telefono que inician al programa
 
 client.on('message', async (message) => {
   
-  console.log(`Mensaje recibido de ${message.from}: ${message.body}`);
+  // console.log(`Mensaje recibido de ${message.from}: ${message.body}`);
 
   
   
@@ -411,7 +413,7 @@ client.on('auth_failure', (msg) => {
 
 
 client.on('ready', () => {
-  console.log('Cliente listo');
+  // console.log('Cliente listo');
 });
 
 client.initialize();
@@ -431,8 +433,8 @@ const registros = [];
 app.post('/procesar', (req, res) => {
   const { numbers, messages } = req.body;
 
-  console.log('Números de Teléfono:', numbers);
-  console.log('Mensajes:', messages);
+  // console.log('Números de Teléfono:', numbers);
+  // console.log('Mensajes:', messages);
 
   if (!numbers || !messages) {
     res.status(400).send('Los datos enviados no son válidos.');
@@ -467,7 +469,7 @@ app.post('/procesar', (req, res) => {
 
 
   setInterval(() => {
-    console.log("MSGenvio:", MSGenvio);
+    // console.log("MSGenvio:", MSGenvio);
   }, 1000);
 
 
@@ -495,12 +497,12 @@ app.post('/procesar', (req, res) => {
           };
 
           registros.push(registro); // Agregar el registro al array de registros
-          console.log(registro.mensaje.green);
+          // console.log(registro.mensaje.green);
 
           // Verifica si estás en el último elemento del array
           if (index === numbers.length - 1) {
             registros.push({ mensaje: 'Terminé de enviar los mensajes', numero: 'Oprima el boton borra registro' });
-            console.log('Terminé de enviar');
+            // console.log('Terminé de enviar');
           }
         })
         .catch((error) => {
@@ -528,6 +530,8 @@ app.delete('/borrar-registros', (req, res) => {
   registros.length = 0; // Borra todos los registros
   res.json({ message: 'Registros borrados exitosamente' });
 });
+
+
 
 
 
